@@ -1,0 +1,110 @@
+\documentclass[a4paper,hidelinks,12pt]{report}
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ left=30mm,
+ top=25mm,
+ bottom=20mm,
+ right=20mm
+}
+\usepackage{acro}
+\usepackage{authblk}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{mathabx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[toc,page]{appendix}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage[labelfont=bf]{caption}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{blindtext}
+\usepackage{csquotes}
+\usepackage{makecell}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage{adjustbox}
+\usepackage[smartEllipses, pipeTables]{markdown}
+\usepackage{geometry}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\DeclareAcronym{ddos} {
+    short=DDoS,
+    long=Distributed Denial of Service,
+}
+\lstset{style=mystyle}
+
+\setcounter{secnumdepth}{5}
+
+\begin{document}
+\nocite{*}
+\input{before_main/title}
+\input{before_main/approval}
+\input{before_main/acknowledge}
+
+
+\tableofcontents{}
+
+
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+\lstlistoflistings
+\addcontentsline{toc}{chapter}{List of Listings}
+\input{before_main/abbreviations}
+\addcontentsline{toc}{chapter}{List of Abbreviations}
+\pagebreak
+
+% MAIN TEX HERE
+\input{before_main/abstract}
+\input{tex/intro}
+\input{tex/scope}
+\input{tex/literature}
+\input{tex/method}
+\input{tex/result}
+\input{tex/discussion}
+\input{tex/conclusion}
+% END MAIN TEX HERE
+
+% \printbibliography
+
+
+\bibliographystyle{ieeetr}
+\bibliography{reference}
+
+\end{document}

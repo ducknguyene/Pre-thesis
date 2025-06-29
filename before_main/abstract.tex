@@ -1,0 +1,9 @@
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+The increasing frequency and sophistication of Distributed Denial of Service (DDoS) attacks pose a significant threat to the availability of modern computer networks and services. This thesis presents a simulation-based study using the GNS3 network emulator to analyze the effectiveness of Suricata, an open-source Intrusion Detection and Prevention System (IDS/IPS), in mitigating UDP flood attacks. The primary objective is to evaluate Suricata's ability to detect and block malicious traffic under various attack intensities while preserving network performance.
+\\
+A simulated environment was created in GNS3 to replicate a real-world botnet scenario, where multiple attacker machines coordinated to flood a victim server with high-volume UDP packets. Suricata was configured in IPS mode on the victim machine, utilizing custom rules to drop excessive traffic and log suspicious activity. Three experimental scenarios were conducted: a baseline attack without Suricata, a flood attack with Suricata IPS enabled, and a controlled attack with a reduced packet rate. Packet captures and system resource usage were analyzed using tools such as Wireshark and Suricata’s logging system.
+\\
+The results reveal that while Suricata effectively identifies and blocks a significant portion of malicious traffic at moderate packet rates, it struggles to mitigate high-rate floods in real time due to kernel and performance limitations. This study highlights both the capabilities and limitations of Suricata in practical DDoS defense, emphasizing the importance of strategic configuration, traffic shaping, and layered security approaches in modern network protection.
+\\
+\textbf{Keywords:} DDoS, Webserver, GNS3, network, performance, hping3, UDP, Linux, Wireshark, Suricata

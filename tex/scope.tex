@@ -1,0 +1,29 @@
+\chapter{Scope and Limitations}
+\section{Scope of The Project}
+In this project the simulation of Distributed Denial of Service (DDoS) based attacks is done i.e. UDP flood attacks have been simulated by GNS3 network emulator. The key objective is to determine the effectiveness and the efficiency of the Suricata as an Intrusion Prevention System (IPS) in various traffic environments. The present project will be involving:
+\begin{itemize}
+    \item Designing and deploying a virtual network in GNS3 consists of routers, switches, end-devices.
+    \item Automating UDP flood attacks using tools like hping3 from multiple attack sources.
+    \item Installing and configuring Suricata in IPS mode on victim machine and see its effectiveness against various attacks.
+    \item Using custom Suricata rules to detect and drop suspicious UDP flood packets.
+    \item Capturing and analyzing network traffic through the victim using Wireshark and Suricata's log files.
+    \item Comparing IPS's behavior under different scenarios. 
+\end{itemize}
+The experiment was developed within the scale of GNS-3 and Oracle VirtualBox.
+\section{Limitations}
+This project also has certain limitations that should be acknowledged:
+\begin{itemize}
+    \item Simulated Environment Only
+    \\The experiment is all carried out in a virtualized GNS3 environment that can not fully represent all the complexity, variances in performance and unpredictability of real world networks.
+    \item Attack Type
+    \\ There is only one DDoS technique UDP flood tested. Some other frequently used techniques, e.g. SYN floods, TCP floods, and amplification attacks \cite{management2020research} are beyond the scope of the project.
+    \item Single Defense Mechanism
+    \\ The project evaluates only Suricata in standalone IPS mode. It does not include a comparison with other IDS/IPS tools or advanced mitigation techniques.
+    \item Performance Constraints
+    \\ The effectiveness of Suricata is partially dependent on the hardware resources of the victim machine. Limited CPU and memory of virtual machines may cause an impact on the detection speed and packet dropping rates.
+    \item Rule Simplicity
+    \\Thresholds based rules were just implemented by writing them down especially. The project also does not evaluate Suricata complete detection capability with commercial and community rule sets.
+    \item No Encrypted Traffic Handling
+    \\ The experiment does not deal with other traffic, e.g. encrypted traffic (eg: SSL/UDP), except cleartext UDP traffic. This thesis does not apply to the case of traffic that is encrypted, or obfuscated and can affect detection.
+\end{itemize}
+These restrictions offer useful guidance to future developments and further testing scenarios in any subsequent research.
